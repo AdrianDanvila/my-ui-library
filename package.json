@@ -1,26 +1,46 @@
 {
-  "name": "my-ui-library",
+  "type": "module",
+  "name": "my-ui-library-adx",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsc --project tsconfig.build.json && rollup -c",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "next": "14.2.7",
+    "node-sass": "^9.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.7"
+    "sass": "^1.77.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.7"
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8",
+    "rollup": "^4.21.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0"
   }
 }

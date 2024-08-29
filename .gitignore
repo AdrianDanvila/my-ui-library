@@ -34,3 +34,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignorar directorio de salida
+/dist
+
+# Ignorar archivos temporales o de caché
+.cache/
+.rollup.cache/
+.temp/
+
+# Ignorar archivos de configuración específicos de build
+rollup.config.js
+tsconfig.build.json
+
+# Ignorar archivos de logs y otros temporales
+*.log
+.DS_Store
