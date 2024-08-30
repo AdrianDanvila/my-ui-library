@@ -1,16 +1,27 @@
-// src/components/Button/Button.tsx
-import React from "react";
-import "./Button.scss";
+import React, { ReactNode } from 'react'
+import './Button.scss'
 
 type ButtonProps = {
-  label: string;
-  onClick: () => void;
-};
+  label: string
+  icon: string | ReactNode
+  classname: string
+  unStyled: string
+  onClick: () => void
+}
 
-export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  icon,
+  onClick,
+  classname,
+  unStyled,
+}) => {
   return (
-    <button className="btn" onClick={onClick}>
+    <button
+      className={`${classname} ${unStyled ? '' : 'btn'}`}
+      onClick={() => onclick}>
       {label}
+      {icon}
     </button>
-  );
-};
+  )
+}
