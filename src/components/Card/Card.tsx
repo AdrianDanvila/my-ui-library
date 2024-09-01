@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, ReactNode, useRef, useState } from 'react'
-import './card.scss'
 type RGB = `rgb(${number}, ${number}, ${number})`
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`
 type HEX = `#${string}`
+import '../../styles/Card.module.scss'
 
 type Color = RGB | RGBA | HEX
 type CardProps = {
