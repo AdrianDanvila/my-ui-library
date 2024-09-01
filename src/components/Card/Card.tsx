@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, ReactNode, useRef, useState } from 'react'
-import './card.module.scss'
+import './card.scss'
 type RGB = `rgb(${number}, ${number}, ${number})`
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`
 type HEX = `#${string}`
