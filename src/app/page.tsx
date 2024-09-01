@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       <Card
         title="hola"
-        effectColor={`rgba(${255} , ${0}, ${0}, ${6})`}>
+        effectColor={`#000`}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
         fringilla neque ac mi rutrum efficitur. Vestibulum id luctus enim. Cras
         et massa nec nisi consectetur sollicitudin et volutpat erat. Praesent
